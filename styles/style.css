@@ -1,0 +1,96 @@
+body {
+  background-image: linear-gradient(180deg,
+        rgb(250, 250, 250) 95%,
+        rgb(170, 166, 111) 100%);
+  background-attachment: fixed;
+}
+
+div {
+  position: relative;
+  margin:auto;
+  height: 200px;
+  width: calc(200px * 1.618);
+  top: 100px;
+  box-shadow: 2px 8px 20px 0px rgb(210, 210, 210);
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 0.1px;
+  border-color: rgb(245, 245, 245);
+  background-color: rgb(253, 253, 253);
+}
+
+div:hover {
+  animation-name: size;
+  animation-duration: 30ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes size {
+  100% {
+    position: relative;
+      margin: auto;
+      height: calc(200px * 1.03);
+      width: calc(200px * 1.618 * 1.03);
+      box-shadow: 4px 12px 30px 0px rgb(200, 200, 200);
+      border-radius: calc(10px * 1.03);
+      background-image: linear-gradient(90deg,
+            rgb(245, 245, 245) 0%,
+            rgb(215, 215, 215) 200%);
+  }
+}
+
+h1 {
+  position:absolute;
+  left: 30px;
+  top: 10px;
+  width: fit-content;
+  height: fit-content;
+  font: bold 45px Verdana, sans-serif;
+  text-align: center;
+  background-image: linear-gradient(148deg,
+    rgb(11, 0, 110) 30%,
+    rgb(241, 2, 102) 100%);
+  background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+div:hover h1 {
+  animation-name: h1-font-size;
+  animation-duration: 30ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes h1-font-size {
+  100% {
+    top: calc(10px * 0.8);
+    font: bold calc(45px * 1.03) Verdana, sans-serif;
+    background-image: linear-gradient(148deg,
+          rgb(0, 49, 112) 30%,
+          rgb(30, 241, 2) 100%);
+  }
+}
+
+p {
+  position: absolute;
+    left: 30px;
+    top: 75px;
+  font: bold 25px Verdana, sans-serif;
+  text-align: left;
+  width: fit-content;
+  height: fit-content;
+  color: rgb(143, 133, 143);
+}
+
+div:hover p {
+  animation-name: p-font-size;
+  animation-duration: 30ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes p-font-size {
+  100% {
+    font: bold calc(25px * 1.03) Verdana, sans-serif;
+    color: rgb(117, 115, 117)
+  }
+}
